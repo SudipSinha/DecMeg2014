@@ -6,7 +6,7 @@ disp(strcat('Creating sumission file',filename_submission,'...'));
 f = fopen(filename_submission,'w');
 fprintf(f,'%s,%s\n','Id','Prediction');
 for i = 1 : length(subject_test)
-    filename = strcat('data/test_subject',num2str(subject_test(i)),'.mat');
+    filename = strcat('../data/test_subject',num2str(subject_test(i)),'.mat');
     disp(strcat('Loading ',filename,':'));
     data = load(filename);
     ids = data.Id;

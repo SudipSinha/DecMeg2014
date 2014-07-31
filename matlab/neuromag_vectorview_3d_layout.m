@@ -1,4 +1,4 @@
-data= load('../DecMeg2014-master/additional_files/NeuroMagSensorsDeviceSpace.mat');
+data= load('../additional_files/NeuroMagSensorsDeviceSpace.mat');
     position = data.pos;
     orientation = data.ori;
     label = data.lab;
