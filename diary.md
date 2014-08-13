@@ -12,7 +12,6 @@
 
 
 ## 2014-07-29
-
 * Cannot run SVM from MATLAB - run tonight
 * Cannot run PCA from MATLAB
 
@@ -22,10 +21,12 @@
 * t ∈ [0, 0.5]  : (0.101976, 0.64298)
 * t ∈ [0, 1]    : (0.073932, 0.63993)
 * t ∈ [-0.5, 1] : (0.050563, 0.64342)
-#### prejudices
+
+#### Removing prejudices
 * t in [0, 0.5] : (0.102613, 0.63731)
 * t in [0, 1]   : (0.102613, 0.63731)
-#### Same
+
+#### Thoughts
 The above data does not make sense, since we’re only looking at the test error. The idea is to use a part of the training data for training and the rest as test. We can loop over different combinations to achieve an unbiased result. Met with Morteza and discussed this.
 
 
@@ -35,9 +36,11 @@ The above data does not make sense, since we’re only looking at the test error
 * t ∈ [0, 1]       : 0.064523
 * t ∈ [-0.5, 0.5]: 0.058013
 * t ∈ [-0.5, 1]   : 0.043810
+
 #### Minus mean(signal for t ∈ [-0.5, 0]
 * t ∈ [0, 0.5]    : 0.088604
 * t ∈ [0, 1]       : 0.062443
+
 #### Read
 * Transfer learning: http://en.wikipedia.org/wiki/Inductive_transfer
 * Transductive learning: http://en.wikipedia.org/wiki/Transduction_(machine_learning)
@@ -51,6 +54,7 @@ The above data does not make sense, since we’re only looking at the test error
 
 ## 2014-08-04
 * Set up a common cross validation framework.
+
 #### Smoothing - 3c
 * t ∈ [0, 0.5]    : 0.081143
 
@@ -75,8 +79,10 @@ Completed the code for running SVM and getting the output. Letting it run for 2 
 ## 2014-08-13
 Ahhh, all efforts wasted. The LAN was not working. Unable to login, I hard reset the machine. Will never get to know if the code ran.
 Learnt to always use a console logger. Set it up using `startup.m` and `finish.m` files.
+
 #### Smoothing
 * Using single moving (central) average on `n`c successive elements.
 * Results in doc.md 
+
 #### SVM
 * One last try - Will try to run it with logging on. Hopeful to see some result tomorrow.
