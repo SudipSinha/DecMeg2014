@@ -97,7 +97,7 @@ for idx = 1 : numel(C)
 	%	Training code on train_train
 	disp('Training the classifier ...')
 %	[BFinal,FitInfoFinal] = lasso(X_train_train,single(y_train_train),'Lambda',0.005,'Alpha',0.9);
-	cv_acc(i) = libsvmtrain(double(y_train_train), double(X_train_train), sprintf('-t 0 -h 0 -c %f -v %f', C(i), folds));
+	cv_acc(idx) = libsvmtrain(double(y_train_train), double(X_train_train), sprintf('-t 0 -h 0 -c %f -v %f', C(idx), folds));
 % 	model = libsvmtrain(double(y_train_train), double(X_train_train), '-t 0');
 	disp(' ');
 	
