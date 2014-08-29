@@ -7,6 +7,11 @@
 % Olivetti (olivetti@fbk.eu) as a benchmark for DecMeg 2014.
 
 
+if matlabpool('size') == 0  % checking to see if my pool is already open
+    matlabpool open 2
+end
+
+
 %	Data preparation
 clear all;
 disp('DecMeg2014: https://www.kaggle.com/c/decoding-the-human-brain');
@@ -24,7 +29,7 @@ fprintf('Restricting MEG data to the interval [%f, %f] sec.', tmin, tmax);
 subjects_train = 1:16;
 
 err = zeros([1 4]);
-for idx = 1 : 4
+parfor idx = 1 : 4
 	fprintf('\n\n\n\nTrial: %i\n========\n\n', idx);
 	
 	%	Subdivide the training sample into train and test subsamples
