@@ -1,0 +1,2 @@
+%   Stop logging.
+diary('off');
